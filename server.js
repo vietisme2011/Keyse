@@ -13,7 +13,7 @@ app.use(express.json());
 app.get("/keys", (req, res) => {
   try {
     if (!fs.existsSync(DATA_FILE)) fs.writeFileSync(DATA_FILE, "{}");
-    const data = fs.readFileSync(DATA_FILE", "utf-8");
+    const data = fs.readFileSync(DATA_FILE, "utf-8");
     res.setHeader("Content-Type", "application/json");
     res.send(data);
   } catch (e) {
